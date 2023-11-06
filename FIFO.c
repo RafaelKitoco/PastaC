@@ -20,6 +20,7 @@ void inserir(FILA *fila, int idade, char *nome) {
         if (*fila == NULL) { return; }
         (*fila)->idade = idade;
         strcpy((*fila)->nome, nome);
+        (**fila).PROXI = NULL;
 
     } else {
         inserir(&(**fila).PROXI, idade, nome);
